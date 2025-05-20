@@ -6,17 +6,20 @@ public class ChickenController : MonoBehaviour
     Rigidbody2D rigid2d;
     public GameObject player;
     PlayerController plycon;
+    CheckSideEnemy checks;
+    CheckFallEnemy checkf;
     int hp = 2;
     int rand, left = 34, right = 69;//“®‚«‚ðƒ‰ƒ“ƒ_ƒ€‚ÅŒˆ‚ß‚é
     float delta = 0.0f;
     bool hit;
-    public bool fall = false, side = true;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         animator = GetComponent<Animator>();
         rigid2d = GetComponent<Rigidbody2D>();
         plycon = player.GetComponent<PlayerController>();
+        checks=transform.GetChild(0).GetComponent<CheckSideEnemy>();
+        checkf=transform.GetChild(1).GetComponent<CheckFallEnemy>();
     }
 
     // Update is called once per frame
@@ -32,7 +35,7 @@ public class ChickenController : MonoBehaviour
 
         if (0 <= rand && rand < left && !hit)
         {
-            if(!fall && !side)//ŠR‚É‚¢‚È‚¢‚©‚Â‘O•û‚É‰½‚à‚È‚¢
+            if(!checkf.fall && !checks.side)//ŠR‚É‚¢‚È‚¢‚©‚Â‘O•û‚É‰½‚à‚È‚¢
             {
                 animator.SetBool("Run", true);
                 transform.localScale = new Vector3(1, 1, 1);
@@ -46,7 +49,7 @@ public class ChickenController : MonoBehaviour
         }
         else if (left <= rand && rand < right && !hit)
         {
-            if(!fall && !side)
+            if(!checkf.fall && !checks.side)
             {
                 animator.SetBool("Run", true);
                 transform.localScale = new Vector3(-1, 1, 1);
