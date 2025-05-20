@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour
             }
             else if (0.65f>=delta&&delta > 0.583f)
             {
-                this.transform.position = flag.transform.position + new Vector3(0.5f, 0, 0);
+                this.transform.position = flag.transform.position + new Vector3(0.5f, 0.5f, 0);
             }
         }
         else
@@ -74,6 +74,10 @@ public class PlayerController : MonoBehaviour
 
             if (Input.GetMouseButtonDown(0) && jump < 2)
             {
+                start = Vector3.zero;
+                end = Vector3.zero;
+                force = Vector3.zero;//リセット処理
+
                 mousepos = Input.mousePosition;
                 start = Camera.main.ScreenToWorldPoint(new Vector3(mousepos.x, mousepos.y, 10));
                 fall = 0;
@@ -173,7 +177,7 @@ public class PlayerController : MonoBehaviour
             animator.SetTrigger("Hit");
         }
 
-        if (collision.gameObject.tag != "Block"&&collision.gameObject.tag=="Start" && collision.gameObject.tag == "Check" && collision.gameObject.tag == "Goal")
+        if (collision.gameObject.tag != "Block"&&collision.gameObject.tag!="Start" && collision.gameObject.tag != "Check" && collision.gameObject.tag != "Goal" && collision.gameObject.tag != "Falling" && collision.gameObject.tag != "Jumping")
         {
             if (Vector3.Distance(start, end) <= 2.0f)
             {
@@ -182,9 +186,6 @@ public class PlayerController : MonoBehaviour
                 rigid2d.AddForce(new Vector3(3.0f * transform.localScale.x * (-1), 5.0f, 0), ForceMode2D.Impulse);//のけぞり演出
             }
         }
-        start = Vector3.zero;
-        end = Vector3.zero;
-        force = Vector3.zero;
     }
 
     private void OnCollisionExit2D(Collision2D collision)

@@ -24,7 +24,7 @@ public class BoxController : MonoBehaviour
             delta -= Time.deltaTime;
             if (delta < 0.0f)
             {
-                
+
                 Destroy(gameObject);
             }
         }
@@ -32,11 +32,11 @@ public class BoxController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Player")//プレイヤー以外の衝突を無視
+        if (collision.gameObject.tag == "Player" && collision.gameObject.tag != "CheckGround" && collision.gameObject.tag != "CheckSideR")//プレイヤー以外の衝突を無視
         {
-            if (Mathf.Abs(player.GetComponent<PlayerController>().force.y) > 3.0f || Mathf.Abs(player.GetComponent<PlayerController>().force.x) > 3.0f)
+            if (Mathf.Abs(player.GetComponent<PlayerController>().force.y) > 2.0f || Mathf.Abs(player.GetComponent<PlayerController>().force.x) > 2.0f)
             {//プレイヤーが空中から下方向に加速した時
-                
+
                 hp--;
                 if (hp > 0)//ボックスの耐久値が0ではないとき
                 {

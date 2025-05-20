@@ -7,7 +7,7 @@ public class ChickenController : MonoBehaviour
     public GameObject player;
     PlayerController plycon;
     CheckSideEnemy checks;
-    CheckFallEnemy checkf;
+    CheckFallEnemy checkf;//ŠR‚É‚¢‚È‚¢‚©‚Â‘O•û‚É‰½‚à‚È‚¢‚Ì”»’è‚ð“¾‚é
     int hp = 2;
     int rand, left = 34, right = 69;//“®‚«‚ðƒ‰ƒ“ƒ_ƒ€‚ÅŒˆ‚ß‚é
     float delta = 0.0f;
