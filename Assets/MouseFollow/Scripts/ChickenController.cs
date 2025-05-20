@@ -10,7 +10,7 @@ public class ChickenController : MonoBehaviour
     int rand, left = 34, right = 69;//動きをランダムで決める
     float delta = 0.0f;
     bool hit;
-    public bool fall, side;
+    public bool fall = false, side = true;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -32,22 +32,38 @@ public class ChickenController : MonoBehaviour
 
         if (0 <= rand && rand < left && !hit)
         {
-            animator.SetBool("Run", true);
-            transform.localScale = new Vector3(1, 1, 1);
-            transform.position -= new Vector3(0.05f, 0, 0);//左移動
+            if(!fall && !side)//崖にいないかつ前方に何もない
+            {
+                animator.SetBool("Run", true);
+                transform.localScale = new Vector3(1, 1, 1);
+                transform.position -= new Vector3(0.05f, 0, 0);//左移動
+            }
+            else
+            {//方向転換
+                rand = Random.Range(left,right);
+                transform.localScale = new Vector3(-1, 1, 1);
+            }
         }
         else if (left <= rand && rand < right && !hit)
         {
-            animator.SetBool("Run", true);
-            transform.localScale = new Vector3(-1, 1, 1);
-            transform.position += new Vector3(0.05f, 0, 0);//右移動
+            if(!fall && !side)
+            {
+                animator.SetBool("Run", true);
+                transform.localScale = new Vector3(-1, 1, 1);
+                transform.position += new Vector3(0.05f, 0, 0);//右移動
+            }
+            else
+            {
+                rand = Random.Range(0, left);
+                transform.localScale = new Vector3(1, 1, 1);
+            }
         }
         else
         {
             animator.SetBool("Run", false);
         }
 
-        if (hp <= 0)
+        if (hp <= 0)//hpがなくなったときの処理
         {
             animator.SetBool("Death", true);
             if (delta > 0.57f)
@@ -56,26 +72,26 @@ public class ChickenController : MonoBehaviour
             }
 
         }
+
+        if (transform.position.y < -8)//落下した（落とされた）時の処理
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-            if (plycon.force.magnitude > 2.0f)
+            if (plycon.force.magnitude > 2.0f)//一定の速度でプレイヤーがぶつかってきたとき
             {
                 hp--;
                 hit = true;
                 delta = 0.0f;
                 animator.SetTrigger("Hit");
                 rigid2d.AddForce(new Vector3(0.3f * (plycon.force.x / Mathf.Abs(plycon.force.x)), 2.0f, 0), ForceMode2D.Impulse);//のけぞり演出
-                rand = 90;
             }
-            else
-            {
-                rand = 90;
-            }
-
+            rand = 90;
         }
     }
 }

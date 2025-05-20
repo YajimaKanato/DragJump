@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6565646997792183401}
   - component: {fileID: 5135045797326201792}
+  - component: {fileID: 314276994957863105}
   m_Layer: 0
   m_Name: CheckFall
   m_TagString: Untagged
@@ -68,6 +69,18 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: -1, y: -1}
   m_Radius: 0.13
+--- !u!114 &314276994957863105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1842918406985861052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0544a6b25c3251a408f36824932ebc32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8462960313790057874
 GameObject:
   m_ObjectHideFlags: 0
@@ -78,6 +91,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7354255255045687872}
   - component: {fileID: 3981283660656807356}
+  - component: {fileID: 969365727013161386}
   m_Layer: 0
   m_Name: CheckSide
   m_TagString: Untagged
@@ -137,6 +151,18 @@ CapsuleCollider2D:
   m_Offset: {x: -0.77, y: 0}
   m_Size: {x: 0.05, y: 0.53}
   m_Direction: 0
+--- !u!114 &969365727013161386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8462960313790057874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 201c37549ed4be1498005b712e908894, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &9003918777542024711
 GameObject:
   m_ObjectHideFlags: 0
@@ -287,7 +313,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.67
+  m_Radius: 0.7
 --- !u!50 &6410089042253311125
 Rigidbody2D:
   serializedVersion: 5
