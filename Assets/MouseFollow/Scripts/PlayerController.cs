@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour
                 hp = defhp;
                 delta = 0.0f;
             }
-            else if (0.65f>=delta&&delta > 0.583f)
+            else if (0.65f >= delta && delta > 0.583f)
             {
                 this.transform.position = flag.transform.position + new Vector3(0.5f, 0.5f, 0);
             }
@@ -166,14 +166,14 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        if (collision.gameObject.tag == "RH"||collision.gameObject.tag=="Snail")
+        if (collision.gameObject.tag == "RH" || collision.gameObject.tag == "Snail" || collision.gameObject.tag == "Bullet")
         {
             hp--;
             animator.SetTrigger("Hit");
             rigid2d.AddForce(new Vector3(3.0f * transform.localScale.x * (-1), 5.0f, 0), ForceMode2D.Impulse);//ÇÃÇØÇºÇËââèo
         }
 
-        if (collision.gameObject.tag != "Block"&&collision.gameObject.tag!="Start" && collision.gameObject.tag != "Check" && collision.gameObject.tag != "Goal" && collision.gameObject.tag != "Falling" && collision.gameObject.tag != "Jumping")
+        if (collision.gameObject.tag != "Block" && collision.gameObject.tag != "Start" && collision.gameObject.tag != "Check" && collision.gameObject.tag != "Goal" && collision.gameObject.tag != "Falling" && collision.gameObject.tag != "Jumping" && collision.gameObject.tag == "Box")
         {
             if (Vector3.Distance(start, end) <= 2.0f)
             {
@@ -191,7 +191,7 @@ public class PlayerController : MonoBehaviour
         {
             transform.parent = null;
         }
-        if (jump > 0&&collision.gameObject.tag=="Block")
+        if (jump > 0 && collision.gameObject.tag == "Block")
         {
             animator.SetBool("Jump", true);
         }

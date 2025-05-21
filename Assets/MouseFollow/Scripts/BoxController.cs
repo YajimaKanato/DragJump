@@ -32,7 +32,12 @@ public class BoxController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Player" && collision.gameObject.tag != "CheckGround" && collision.gameObject.tag != "CheckSideR")//プレイヤー以外の衝突を無視
+        
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "CheckGround" || collision.gameObject.tag == "CheckSideR")//プレイヤー以外の衝突を無視
         {
             if (Mathf.Abs(player.GetComponent<PlayerController>().force.y) > 2.0f || Mathf.Abs(player.GetComponent<PlayerController>().force.x) > 2.0f)
             {//プレイヤーが空中から下方向に加速した時
@@ -47,7 +52,7 @@ public class BoxController : MonoBehaviour
                     box.isTrigger = true;
                     animator.SetBool("Break", true);
                     boxbreak = true;
-                    delta = 1 / 3f;
+                    delta = 1 / 2f;
                 }
             }
         }

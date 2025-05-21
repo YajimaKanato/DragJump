@@ -28,6 +28,7 @@ TagManager:
   - Banana
   - Strawberry
   - Pineapple
+  - CheckGround
   layers:
   - Default
   - TransparentFX
