@@ -81,11 +81,8 @@ public class PlayerController : MonoBehaviour
                 mousepos = Input.mousePosition;
                 start = Camera.main.ScreenToWorldPoint(new Vector3(mousepos.x, mousepos.y, 10));
                 fall = 0;
-                if (jump == 1 || falling == 1)//2段ジャンプの準備
-                {
-                    rigid2d.linearVelocity = Vector3.zero;//速度をゼロにする
-                    rigid2d.bodyType = RigidbodyType2D.Kinematic;//物理演算をオフにする
-                }
+                rigid2d.linearVelocity = Vector3.zero;//速度をゼロにする
+                rigid2d.bodyType = RigidbodyType2D.Kinematic;//物理演算をオフにする
             }
 
             if (Input.GetMouseButtonUp(0) && jump < 2)
@@ -150,12 +147,10 @@ public class PlayerController : MonoBehaviour
             Vector2 contactPoint = contact.point - (Vector2)this.transform.position;//contact.pointで接地地点の座標を得る
             Vector2 upVec = contact.collider.gameObject.transform.up;//接地地点にあるコライダーを持つゲームオブジェクトの中心から上方向のベクトル
 
+            Debug.Log(contact.point);
             if (Vector2.Angle(contactPoint, upVec) > 170)
             {
-                falling = 0;
-                animator.SetBool("Jump", false);
-                jump = 0;
-                break;
+                
             }
         }*/
 
@@ -171,10 +166,11 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        if (collision.gameObject.tag == "RH")
+        if (collision.gameObject.tag == "RH"||collision.gameObject.tag=="Snail")
         {
             hp--;
             animator.SetTrigger("Hit");
+            rigid2d.AddForce(new Vector3(3.0f * transform.localScale.x * (-1), 5.0f, 0), ForceMode2D.Impulse);//のけぞり演出
         }
 
         if (collision.gameObject.tag != "Block"&&collision.gameObject.tag!="Start" && collision.gameObject.tag != "Check" && collision.gameObject.tag != "Goal" && collision.gameObject.tag != "Falling" && collision.gameObject.tag != "Jumping")
@@ -194,6 +190,10 @@ public class PlayerController : MonoBehaviour
         if (transform.parent != null && collision.gameObject.tag == "Falling")//移動床から降りたら
         {
             transform.parent = null;
+        }
+        if (jump > 0&&collision.gameObject.tag=="Block")
+        {
+            animator.SetBool("Jump", true);
         }
     }
 

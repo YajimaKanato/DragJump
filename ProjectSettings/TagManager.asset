@@ -19,6 +19,15 @@ TagManager:
   - CheckSideL
   - RH
   - Saw
+  - Snail
+  - Apple
+  - Kiwi
+  - WMelon
+  - Orange
+  - Cherry
+  - Banana
+  - Strawberry
+  - Pineapple
   layers:
   - Default
   - TransparentFX

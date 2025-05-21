@@ -25,13 +25,13 @@ public class CheckGround : MonoBehaviour
         {
             rigid2d.AddForce(Vector3.up * 20, ForceMode2D.Impulse);
         }
-        playcon.jump = 0;
-        playcon.falling = 0;
+        
     }
 
     private void OnTriggerStay2D(Collider2D collision)//足元のトリガーが何かに触れている間
     {
-        
+        playcon.jump = 0;
+        playcon.falling = 0;
     }
 
     private void OnTriggerExit2D(Collider2D collision)//足元のトリガーが何かから離れた時
