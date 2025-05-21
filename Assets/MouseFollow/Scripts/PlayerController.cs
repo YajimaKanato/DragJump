@@ -209,5 +209,10 @@ public class PlayerController : MonoBehaviour
             hp--;
             animator.SetTrigger("Hit");
         }
+
+        if (collision.gameObject.tag == "")//ƒtƒ‹[ƒc‚ğÌ‚Á‚½‚Æ‚«‚Ìˆ—
+        {
+
+        }
     }
 }

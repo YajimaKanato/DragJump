@@ -16,7 +16,7 @@ public class BirdController : MonoBehaviour
     {
         delta += Time.deltaTime;
 
-        if (delta > 8.0f)
+        if (delta > 8.0f)//動き
         {
             delta = 0.0f;
             transform.localScale = new Vector3(transform.localScale.x * (-1), 1, 1);
@@ -31,12 +31,12 @@ public class BirdController : MonoBehaviour
         }
 
 
-        if (Mathf.Abs(player.position.x - this.transform.position.x) < 10.0f)//ターゲットを追従する
+        if (Mathf.Abs(player.position.x - this.transform.position.x) < 10.0f)//プレイヤーがエリアに入ったら
         {
             dropdelta += Time.deltaTime;
             if (dropdelta > 1.5f)
             {
-                dropdelta = 0.0f;
+                dropdelta = 0.0f;//糞を落とす
                 Instantiate(drop).transform.position = this.transform.position + new Vector3(0.2f* transform.localScale.x, -0.9f, 0);
             }
         }

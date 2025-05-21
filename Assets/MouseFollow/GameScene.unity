@@ -4186,6 +4186,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2005766840}
     m_Modifications:
+    - target: {fileID: 3010624617014036807, guid: b4668485f3e8557409f764a66936d21d, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1221033373}
     - target: {fileID: 4539423846319399244, guid: b4668485f3e8557409f764a66936d21d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 38.416702
@@ -4248,6 +4252,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2005766840}
     m_Modifications:
+    - target: {fileID: 3010624617014036807, guid: b4668485f3e8557409f764a66936d21d, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1221033373}
     - target: {fileID: 4539423846319399244, guid: b4668485f3e8557409f764a66936d21d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 37.416702
@@ -5701,6 +5709,7 @@ GameObject:
   - component: {fileID: 578456122}
   - component: {fileID: 578456121}
   - component: {fileID: 578456120}
+  - component: {fileID: 578456124}
   m_Layer: 0
   m_Name: Apple_0
   m_TagString: Apple
@@ -5836,6 +5845,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1597217397}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &578456124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 578456119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4758808c346f89e45ad7bf0f768920a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &581844615 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 174385611211839151, guid: 172a4ce0ac976d5408383e791fb7e2a3, type: 3}
@@ -5859,6 +5880,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2005766840}
     m_Modifications:
+    - target: {fileID: 3010624617014036807, guid: b4668485f3e8557409f764a66936d21d, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1221033373}
     - target: {fileID: 4539423846319399244, guid: b4668485f3e8557409f764a66936d21d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 38.416702
@@ -5916,6 +5941,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2005766840}
     m_Modifications:
+    - target: {fileID: 3010624617014036807, guid: b4668485f3e8557409f764a66936d21d, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1221033373}
     - target: {fileID: 4539423846319399244, guid: b4668485f3e8557409f764a66936d21d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 37.416702
@@ -6510,6 +6539,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2005766840}
     m_Modifications:
+    - target: {fileID: 3010624617014036807, guid: b4668485f3e8557409f764a66936d21d, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1221033373}
     - target: {fileID: 4539423846319399244, guid: b4668485f3e8557409f764a66936d21d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 39.416702
@@ -7578,6 +7611,7 @@ GameObject:
   - component: {fileID: 781136127}
   - component: {fileID: 781136126}
   - component: {fileID: 781136125}
+  - component: {fileID: 781136128}
   m_Layer: 0
   m_Name: Bananas_0
   m_TagString: Banana
@@ -7713,6 +7747,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &781136128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 781136123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4758808c346f89e45ad7bf0f768920a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &782936089 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6125008566967317117, guid: c0a5b97ad7e377546b82077ed567f334, type: 3}
@@ -7821,6 +7867,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2005766840}
     m_Modifications:
+    - target: {fileID: 3010624617014036807, guid: b4668485f3e8557409f764a66936d21d, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1221033373}
     - target: {fileID: 4539423846319399244, guid: b4668485f3e8557409f764a66936d21d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 38.416702
@@ -8242,6 +8292,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2005766840}
     m_Modifications:
+    - target: {fileID: 3010624617014036807, guid: b4668485f3e8557409f764a66936d21d, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1221033373}
     - target: {fileID: 4539423846319399244, guid: b4668485f3e8557409f764a66936d21d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 38.416702
@@ -8963,6 +9017,7 @@ GameObject:
   - component: {fileID: 945423263}
   - component: {fileID: 945423262}
   - component: {fileID: 945423261}
+  - component: {fileID: 945423265}
   m_Layer: 0
   m_Name: Orange_0
   m_TagString: Orange
@@ -9098,6 +9153,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1597217397}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &945423265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 945423260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4758808c346f89e45ad7bf0f768920a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &949637924
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9451,6 +9518,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2005766840}
     m_Modifications:
+    - target: {fileID: 3010624617014036807, guid: b4668485f3e8557409f764a66936d21d, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1221033373}
     - target: {fileID: 4539423846319399244, guid: b4668485f3e8557409f764a66936d21d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 39.416702
@@ -11620,7 +11691,7 @@ Transform:
   m_GameObject: {fileID: 1221033373}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 22.96, y: 2.85, z: 0}
+  m_LocalPosition: {x: -9.16, y: -2.64, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -12055,6 +12126,7 @@ GameObject:
   - component: {fileID: 1279373533}
   - component: {fileID: 1279373532}
   - component: {fileID: 1279373531}
+  - component: {fileID: 1279373534}
   m_Layer: 0
   m_Name: Pineapple_0
   m_TagString: Pineapple
@@ -12191,6 +12263,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1279373534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1279373529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4758808c346f89e45ad7bf0f768920a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1282632576 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 174385611211839151, guid: 172a4ce0ac976d5408383e791fb7e2a3, type: 3}
@@ -68717,6 +68801,7 @@ GameObject:
   - component: {fileID: 1409342562}
   - component: {fileID: 1409342561}
   - component: {fileID: 1409342560}
+  - component: {fileID: 1409342563}
   m_Layer: 0
   m_Name: Strawberry_0
   m_TagString: Strawberry
@@ -68853,6 +68938,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1409342563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1409342558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4758808c346f89e45ad7bf0f768920a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1422662555
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -71164,6 +71261,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2005766840}
     m_Modifications:
+    - target: {fileID: 3010624617014036807, guid: b4668485f3e8557409f764a66936d21d, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1221033373}
     - target: {fileID: 4539423846319399244, guid: b4668485f3e8557409f764a66936d21d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 37.416702
@@ -71841,6 +71942,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2005766840}
     m_Modifications:
+    - target: {fileID: 3010624617014036807, guid: b4668485f3e8557409f764a66936d21d, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1221033373}
     - target: {fileID: 4539423846319399244, guid: b4668485f3e8557409f764a66936d21d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 39.416702
@@ -72854,6 +72959,7 @@ GameObject:
   - component: {fileID: 1788819254}
   - component: {fileID: 1788819253}
   - component: {fileID: 1788819252}
+  - component: {fileID: 1788819256}
   m_Layer: 0
   m_Name: Kiwi_0
   m_TagString: Kiwi
@@ -72989,6 +73095,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1597217397}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1788819256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1788819251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4758808c346f89e45ad7bf0f768920a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1789313536 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5567462352733285610, guid: 26fe3e6718eb67c4d8f6b7af3f2234c4, type: 3}
@@ -74011,6 +74129,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2005766840}
     m_Modifications:
+    - target: {fileID: 3010624617014036807, guid: b4668485f3e8557409f764a66936d21d, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1221033373}
     - target: {fileID: 4539423846319399244, guid: b4668485f3e8557409f764a66936d21d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 39.416702
@@ -74402,6 +74524,7 @@ GameObject:
   - component: {fileID: 1984421213}
   - component: {fileID: 1984421212}
   - component: {fileID: 1984421211}
+  - component: {fileID: 1984421215}
   m_Layer: 0
   m_Name: Cherries_0
   m_TagString: Cherry
@@ -74538,6 +74661,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1597217397}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1984421215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1984421210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4758808c346f89e45ad7bf0f768920a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1989243787 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 174385611211839151, guid: 172a4ce0ac976d5408383e791fb7e2a3, type: 3}
@@ -75981,6 +76116,7 @@ GameObject:
   - component: {fileID: 2117098313}
   - component: {fileID: 2117098312}
   - component: {fileID: 2117098311}
+  - component: {fileID: 2117098315}
   m_Layer: 0
   m_Name: Melon_0
   m_TagString: WMelon
@@ -76117,6 +76253,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1597217397}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2117098315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2117098310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4758808c346f89e45ad7bf0f768920a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &2118674057 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 174385611211839151, guid: 172a4ce0ac976d5408383e791fb7e2a3, type: 3}
@@ -76316,6 +76464,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2005766840}
     m_Modifications:
+    - target: {fileID: 3010624617014036807, guid: b4668485f3e8557409f764a66936d21d, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1221033373}
     - target: {fileID: 4539423846319399244, guid: b4668485f3e8557409f764a66936d21d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 37.416702
